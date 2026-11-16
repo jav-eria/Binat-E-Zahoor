@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mufflers & Gloves | Binat e Zahoor</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+        /* BASIC SETTINGS */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf5;
+            color: #503b30;
+            overflow-x: hidden;
+        }
+
+
+        /* TOP BAR */
+
+        .top-bar {
+            background: #503b30;
+            color: white;
+            text-align: center;
+            padding: 9px;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+
+        /* NAVBAR - SAME AS KIDS WEAR */
+
+        .site-navbar {
+            background: #fffaf5;
+            padding: 14px 4%;
+            box-shadow: 0 3px 15px rgba(80, 59, 48, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #b88968;
+            border-radius: 50%;
+            background: #f5e8dc;
+            color: #8b6349;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            color: #503b30;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand-name span {
+            color: #b88968;
+        }
+
+        .brand-subtitle {
+            display: block;
+            color: #8b725f;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 23px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #503b30;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b88968;
+        }
+
+
+        /* HERO SECTION */
+
+        .hero {
+            background: linear-gradient(135deg, #f5e8dc, #fff0e9);
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .hero h1 {
+            color: #75483f;
+            font-size: 40px;
+            margin-bottom: 18px;
+        }
+
+        .phone {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #75483f;
+        }
+
+
+        /* PRODUCT GALLERY */
+
+        .gallery {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 20px 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+
+
+        /* WHATSAPP ORDER BUTTON */
+
+        .order-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #168c43;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .order-btn i {
+            font-size: 19px;
+        }
+
+
+        /* IMAGE PREVIEW */
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.90);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 9999;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+
+        /* FOOTER */
+
+        .site-footer {
+            background: linear-gradient(135deg, #302019, #503b30, #684b3b);
+            color: #fffaf5;
+            padding: 65px 7% 0;
+            position: relative;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 45px;
+        }
+
+        .footer-column h3 {
+            color: #e6c5a8;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        .footer-welcome {
+            color: #e6c5a8;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand span {
+            color: #e6c5a8;
+        }
+
+        .footer-tagline {
+            color: #d9bba5;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+        }
+
+        .footer-column p {
+            color: #eaded5;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #eaded5;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #e6c5a8;
+            padding-left: 5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #e6c5a8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e6c5a8;
+        }
+
+        .contact-item a {
+            color: #eaded5;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-instagram,
+        .footer-contact-button {
+            display: inline-block;
+            padding: 11px 20px;
+            margin-top: 12px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #b88968;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .footer-instagram:hover,
+        .footer-contact-button:hover {
+            background: #b88968;
+        }
+
+        .footer-decoration {
+            text-align: center;
+            padding: 22px 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: #e6c5a8;
+            letter-spacing: 3px;
+            font-family: Georgia, serif;
+            font-size: 13px;
+        }
+
+        .footer-bottom {
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: #d9bba5;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .back-to-top {
+            color: #fffaf5;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .back-to-top:hover {
+            color: #e6c5a8;
+        }
+
+
+        /* TABLET RESPONSIVE */
+
+        @media (max-width: 1000px) {
+
+            .navbar-container {
+                justify-content: center;
+            }
+
+        }
+
+        @media (max-width: 991px) {
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+
+            .footer-column:first-child {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            .site-navbar {
+                padding: 12px 14px;
+            }
+
+            .navbar-container {
+                justify-content: center;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                font-size: 17px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .gallery {
+                grid-template-columns: 1fr;
+                padding: 25px 20px 40px;
+            }
+
+            .product-card img {
+                height: 300px;
+            }
+
+            .hero {
+                padding: 45px 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .lightbox img {
+                max-width: 95%;
+                max-height: 80vh;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+
+            .site-footer {
+                padding: 45px 7% 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-column:first-child {
+                grid-column: auto;
+            }
+
+            .footer-brand {
+                font-size: 26px;
+            }
+
+            .footer-column h3 {
+                font-size: 19px;
+            }
+
+            .footer-bottom {
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .footer-decoration {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+        }
+
+        @media (max-width: 400px) {
+
+            .brand-logo {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        HANDMADE WITH LOVE • CROCHETED WITH CARE
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <header class="site-navbar">
+
+        <div class="navbar-container">
+
+            <a href="index.html" class="logo-area">
+
+                <div class="brand-logo">BZ</div>
+
+                <div>
+                    <div class="brand-name">
+                        Binat E <span>Zahoor</span>
+                    </div>
+
+                    <span class="brand-subtitle">
+                        HANDMADE CROCHET
+                    </span>
+                </div>
+
+            </a>
+
+            <nav>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="cardigans.html">Cardigans</a>
+
+                <a href="kids-wear.html">Kids Wear</a>
+
+                <a href="muffler.html">Muffler &amp; Gloves</a>
+
+                <a href="accessories.html">Accessories</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h1>Handmade Mufflers & Gloves</h1>
+
+        <div class="phone">
+            <i class="fa-solid fa-phone"></i>
+            Contact: +92 305 1296795
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT GALLERY -->
+
+    <section class="gallery">
+
+        <div class="product-card">
+            <img src="picture/sc1.jpg" alt="Muffler 1" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/sc2.jpg" alt="Muffler 2" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/sc3.jpg" alt="Muffler 3" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/sc4.jpg" alt="Muffler 4" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/sc5.jpg" alt="Muffler 5" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/sc6.jpg" alt="Muffler 6" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/m4.jpg" alt="Muffler 7" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/maf.jpg" alt="Muffler 8" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/maf3.jpg" alt="Muffler 9" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+
+        <!-- GLOVES -->
+
+        <div class="product-card">
+            <img src="picture/g2.jpg" alt="Gloves 1" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g1.jpg" alt="Gloves 2" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g3.jpg" alt="Gloves 3" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g4.jpg" alt="Gloves 4" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g5.jpg" alt="Gloves 5" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g6.jpg" alt="Gloves 6" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g8.jpg" alt="Gloves 7" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g7.jpg" alt="Gloves 8" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g9.jpg" alt="Gloves 9" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+
+        <div class="product-card">
+            <img src="picture/g10.jpg" alt="Gloves 10" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+<div class="product-card">
+            <img src="picture/mf.jpg" alt="Gloves 10" onclick="openImage(this.src)">
+            <a href="https://wa.me/923051296795" class="order-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order Now
+            </a>
+        </div>
+    </section>
+
+
+    <!-- IMAGE PREVIEW -->
+
+    <div class="lightbox" id="lightbox">
+
+        <span class="close-btn" onclick="closeImage()">&times;</span>
+
+        <img id="largeImage" src="" alt="Product Preview">
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <!-- BRAND INFORMATION -->
+
+            <div class="footer-column">
+
+                <div class="footer-welcome">
+                    WELCOME TO OUR WORLD
+                </div>
+
+                <div class="footer-brand">
+                    Binat E<span>Zahoor</span>
+                </div>
+
+                <div class="footer-tagline">
+                    HANDMADE CROCHET
+                </div>
+
+                <p>
+                    Welcome to Binat E Zahoor! We are delighted to have
+                    you here. Discover a world of beautiful handmade
+                    crochet creations, thoughtfully crafted with love,
+                    passion and attention to every little detail.
+
+                    From cozy cardigans to adorable kids wear and
+                    elegant accessories, every piece is made to bring
+                    warmth, beauty and happiness into your life.
+
+                    Thank you for being a part of our handmade journey.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Explore Our Website</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="cardigans.html">Cardigans</a></li>
+
+                    <li><a href="kids-wear.html">Kids Wear</a></li>
+
+                    <li><a href="muffler.html">Muffler & Gloves</a></li>
+
+                    <li><a href="accessories.html">Accessories</a></li>
+
+                </ul>
+
+            </div>
+
+
+           <!-- CONTACT INFORMATION -->
+
+            <div class="footer-column">
+
+                <h3>Get In Touch</h3>
+
+
+                <a class="footer-instagram"
+                    href="https://www.instagram.com/binatezahoor"
+                    target="_blank">
+                    ◎ VISIT OUR INSTAGRAM
+                </a>
+
+                <br>
+
+                <a class="footer-contact-button"
+                    href="https://wa.me/923051296795"
+                    target="_blank">
+                    CONTACT US ON WHATSAPP
+                </a>
+
+            </div>
+ 
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Binat E Zahoor. All Rights Reserved.
+            </p>
+
+            <p>
+                Every stitch tells a story. ♡
+            </p>
+
+            <a href="#top" class="back-to-top">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // OPEN IMAGE
+
+        function openImage(image) {
+
+            const lightbox = document.getElementById("lightbox");
+            const largeImage = document.getElementById("largeImage");
+
+            largeImage.src = image;
+
+            lightbox.style.display = "flex";
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        // CLOSE IMAGE
+
+        function closeImage() {
+
+            const lightbox = document.getElementById("lightbox");
+            const largeImage = document.getElementById("largeImage");
+
+            lightbox.style.display = "none";
+
+            largeImage.src = "";
+
+            document.body.style.overflow = "auto";
+
+        }
+
+
+        // CLICK OUTSIDE IMAGE TO CLOSE
+
+        document.getElementById("lightbox").addEventListener("click", function(event) {
+
+            if (event.target === this) {
+                closeImage();
+            }
+
+        });
+
+
+        // ESCAPE KEY TO CLOSE IMAGE
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                closeImage();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

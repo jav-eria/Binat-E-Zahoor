@@ -1,0 +1,1142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="8rw1XVNazzeiMtXpxHCyeWhMxakoT3BE1YNyMQIR8uQ">
+<meta name="description" content="Binaat E Zahoor offers beautiful handmade crochet products, mufflers, gloves, bags and customized crochet accessories.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="Binaat E Zahoor">
+
+    <title>Binat e Zahoor | Handmade Crochet</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fffaf5;
+            color: #503b30;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        /* TOP BAR */
+
+        .top-bar {
+            background: #503b30;
+            color: white;
+            text-align: center;
+            padding: 9px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        /* NAVBAR */
+
+        .site-navbar {
+            background: #fffaf5;
+            padding: 14px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(80, 59, 48, 0.08);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #503b30 !important;
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            background: #f5e8dc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #503b30;
+        }
+
+        .brand-name {
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .brand-tagline {
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #503b30 !important;
+            font-size: 14px;
+            margin: 0 8px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #b88968 !important;
+        }
+
+        /* CAROUSEL */
+
+        .carousel-item {
+            height: 520px;
+            background: #f5e8dc;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .carousel-caption {
+            background: rgba(40, 25, 18, 0.48);
+            padding: 25px;
+            border-radius: 8px;
+            bottom: 60px;
+            pointer-events: none;
+        }
+
+        .carousel-caption a {
+            pointer-events: auto;
+        }
+
+        .carousel-caption h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .carousel-caption p {
+            font-size: 17px;
+        }
+
+        .carousel-btn {
+            display: inline-block;
+            background: #b88968;
+            color: white;
+            text-decoration: none;
+            padding: 11px 25px;
+            margin-top: 10px;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: #503b30;
+            color: white;
+        }
+
+        /* SECTION HEADINGS */
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            color: #503b30;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #8b7567;
+            font-size: 15px;
+        }
+
+        /* COLLECTIONS */
+
+        .collection-section {
+            padding: 75px 6%;
+        }
+
+        .category-box {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 35px;
+            border: 1px solid #f0e3d9;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .category-title {
+            font-size: 26px;
+            margin-bottom: 22px;
+            color: #503b30;
+        }
+
+        .product-preview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .product-preview img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .product-preview img:hover {
+            transform: scale(1.03);
+        }
+
+        .category-description {
+            color: #806b5e;
+            margin: 22px 0 15px;
+            font-size: 15px;
+        }
+
+        .see-more {
+            display: inline-block;
+            background: #b88968;
+            color: white;
+            text-decoration: none;
+            padding: 11px 28px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .see-more:hover {
+            background: #503b30;
+            color: white;
+        }
+
+        /* ABOUT */
+
+        .about-section {
+            background: #f5e8dc;
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 34px;
+            margin-bottom: 22px;
+        }
+
+        .about-section p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.9;
+            color: #70594b;
+            font-size: 16px;
+        }
+
+        /* WHY HANDMADE */
+
+        .values-section {
+            padding: 75px 6%;
+            text-align: center;
+        }
+
+        .value-box {
+            padding: 28px 20px;
+            background: #fff;
+            border: 1px solid #f0e3d9;
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .value-box h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .value-box p {
+            color: #806b5e;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .value-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            background: #f5e8dc;
+            padding: 65px 6%;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            color: #70594b;
+            margin-bottom: 25px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #503b30;
+            padding: 12px 28px;
+            margin: 7px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #b88968;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            background: #503b30;
+            color: #fffaf5;
+            padding: 55px 7% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 35px;
+        }
+
+        .footer-brand {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .footer-subtitle {
+            font-size: 10px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .footer-grid h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-grid p {
+            color: #e6d6ca;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-grid li {
+            margin-bottom: 12px;
+        }
+
+        .footer-grid a {
+            color: #e6d6ca;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-grid a:hover {
+            color: #d9ae8e;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #e6d6ca;
+        }
+
+        /* IMAGE LIGHTBOX */
+
+        .image-lightbox {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .image-lightbox.active {
+            display: flex;
+        }
+
+        .image-lightbox img {
+            max-width: 95%;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 42px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 767px) {
+
+            .carousel-item {
+                height: 350px;
+            }
+
+            .carousel-caption {
+                bottom: 20px;
+                padding: 12px;
+            }
+
+            .carousel-caption h2 {
+                font-size: 24px;
+            }
+
+            .carousel-caption p {
+                font-size: 13px;
+            }
+
+            .collection-section {
+                padding: 50px 5%;
+            }
+
+            .product-preview {
+                gap: 8px;
+            }
+
+            .product-preview img {
+                height: 150px;
+            }
+
+            .category-box {
+                padding: 15px;
+            }
+
+            .section-heading h2,
+            .about-section h2 {
+                font-size: 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .image-lightbox {
+                padding: 15px;
+            }
+
+            .image-lightbox img {
+                max-width: 100%;
+                max-height: 85vh;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .brand-tagline {
+                font-size: 8px;
+            }
+
+            .product-preview img {
+                height: 110px;
+            }
+
+            .category-title {
+                font-size: 22px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-item {
+                height: 280px;
+            }
+
+            .carousel-caption h2 {
+                font-size: 19px;
+            }
+
+            .carousel-caption p {
+                font-size: 11px;
+                margin-bottom: 5px;
+            }
+
+            .carousel-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        HANDMADE WITH LOVE • CROCHETED WITH CARE
+    </div>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg site-navbar">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+
+                <div class="brand-logo">BZ</div>
+
+                <div>
+                    <div class="brand-name">Binat E <span>Zahoor</span> </div>
+                    <div class="brand-tagline">HANDMADE CROCHET</div>
+                </div>
+
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cardigans.html">Cardigans</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="kids-wear.html">Kids Wear</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="muffler.html">Mufflers & Gloves</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="accessories.html">Accessories</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CAROUSEL -->
+
+    <div id="crochetCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+        data-bs-pause="false"
+        data-bs-wrap="true">
+
+        <div class="carousel-indicators">
+
+            <button type="button" data-bs-target="#crochetCarousel"
+                data-bs-slide-to="0" class="active"></button>
+
+            <button type="button" data-bs-target="#crochetCarousel"
+                data-bs-slide-to="1"></button>
+
+            <button type="button" data-bs-target="#crochetCarousel"
+                data-bs-slide-to="2"></button>
+
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+
+                <img src="picture/y.jpg" alt="Crochet Yarn">
+
+                <div class="carousel-caption">
+
+                    <h2>Crochet Yarn</h2>
+
+                    <p>Cozy Crochet Creations Made With Love</p>
+
+                    <a href="cardigans.html" class="carousel-btn">
+                        Explore Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="picture/sv.jpg" alt="Handmade Crochet">
+
+                <div class="carousel-caption">
+
+                    <h2>Handmade With Love</h2>
+
+                    <p>Beautiful Handmade Creations For Everyone</p>
+
+                    <a href="kids-wear.html" class="carousel-btn">
+                        Explore Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="picture/a.jpg" alt="Crochet Collection">
+
+                <div class="carousel-caption">
+
+                    <h2>Beautiful Crochet Collection</h2>
+
+                    <p>Discover Our Unique Handmade Products</p>
+
+                    <a href="muffler.html" class="carousel-btn">
+                        Explore Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#crochetCarousel"
+            data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#crochetCarousel"
+            data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+    <!-- COLLECTIONS -->
+
+    <section class="collection-section" id="our-collection">
+
+        <div class="section-heading">
+
+            <h2>Our Collections</h2>
+
+            <p>Explore our beautiful handmade crochet creations</p>
+
+        </div>
+
+        <!-- CARDIGANS -->
+
+        <div class="category-box">
+
+            <h3 class="category-title">Cardigans</h3>
+
+            <div class="product-preview">
+
+                <img src="picture/sw.jpg" alt="Handmade Cardigan">
+
+                <img src="picture/6.jpg" alt="Crochet Cardigan">
+
+                <img src="picture/sa.jpg" alt="Beautiful Cardigan">
+
+            </div>
+
+            <p class="category-description">
+                Beautiful and cozy handmade crochet cardigans.
+            </p>
+
+            <a href="cardigans.html" class="see-more">
+                SEE MORE →
+            </a>
+
+        </div>
+
+        <!-- KIDS WEAR -->
+
+        <div class="category-box">
+
+            <h3 class="category-title">Kids Wear</h3>
+
+            <div class="product-preview">
+
+                <img src="picture/1.jpg" alt="Crochet Kids Wear">
+
+                <img src="picture/2.jpg" alt="Handmade Baby Dress">
+
+                <img src="picture/3.jpg" alt="Kids Crochet Outfit">
+
+            </div>
+
+            <p class="category-description">
+                Adorable handmade crochet outfits for little ones.
+            </p>
+
+            <a href="kids-wear.html" class="see-more">
+                SEE MORE →
+            </a>
+
+        </div>
+
+        <!-- MUFFLERS AND GLOVES -->
+
+        <div class="category-box">
+
+            <h3 class="category-title">Mufflers & Gloves</h3>
+
+            <div class="product-preview">
+
+                <img src="picture/sc1.jpg" alt="Crochet Muffler">
+
+                <img src="picture/sc2.jpg" alt="Handmade Scarf">
+
+                <img src="picture/sc5.jpg" alt="Crochet Gloves">
+
+            </div>
+
+            <p class="category-description">
+                Warm and stylish handmade mufflers and gloves.
+            </p>
+
+            <a href="muffler.html" class="see-more">
+                SEE MORE →
+            </a>
+
+        </div>
+
+        <!-- ACCESSORIES -->
+
+        <div class="category-box">
+
+            <h3 class="category-title">Accessories</h3>
+
+            <div class="product-preview">
+
+                <img src="picture/to.jpg" alt="Crochet Accessories">
+
+                <img src="picture/4.jpg" alt="Handmade Accessories">
+
+                <img src="picture/bn .jpg" alt="Crochet Collection">
+
+            </div>
+
+            <p class="category-description">
+                Unique handmade crochet accessories for every style.
+            </p>
+
+            <a href="accessories.html" class="see-more">
+                SEE MORE →
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT US -->
+
+    <section class="about-section" id="about">
+
+        <h2>About Binat E Zahoor</h2>
+
+        <p>
+            Welcome to Binat E Zahoor, where creativity meets craftsmanship.
+            We believe that every handmade creation tells a beautiful story.
+            Our crochet products are carefully made with love, patience,
+            and attention to detail. From cozy cardigans to adorable kids wear
+            and stylish accessories, every piece is created to bring warmth,
+            beauty, and happiness to your life.
+        </p>
+
+    </section>
+
+    <!-- WHY HANDMADE -->
+
+    <section class="values-section">
+
+        <div class="section-heading">
+
+            <h2>Why Choose Handmade?</h2>
+
+            <p>Every little detail is made with care</p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="value-box">
+
+                    <div class="value-icon">🧶</div>
+
+                    <h3>Made With Love</h3>
+
+                    <p>
+                        Every product is carefully handmade with love
+                        and attention to detail.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="value-box">
+
+                    <div class="value-icon">✨</div>
+
+                    <h3>Unique Designs</h3>
+
+                    <p>
+                        Beautiful and unique crochet designs
+                        created to make every piece special.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="value-box">
+
+                    <div class="value-icon">💗</div>
+
+                    <h3>Customized Orders</h3>
+
+                    <p>
+                        We love creating special handmade products
+                        according to your preferences.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact-section" id="contact">
+
+        <h2>Let's Get In Touch</h2>
+
+        <p>
+            Have a question or want to place an order?
+            We would love to hear from you!
+        </p>
+
+        <a href="https://wa.me/923051296795"
+            target="_blank"
+            class="contact-btn">
+
+            WhatsApp Us
+
+        </a>
+
+        <a href="https://www.instagram.com/binatezahoor"
+            target="_blank"
+            class="contact-btn">
+
+            Follow on Instagram
+
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+            <!-- BRAND -->
+
+            <div>
+
+                <h2 class="footer-brand">Binat E Zahoor</h2>
+
+                <div class="footer-subtitle">
+                    HANDMADE WITH LOVE • CROCHETED WITH CARE
+                </div>
+
+                <p>
+                    Bringing warmth and beauty through handmade
+                    crochet creations. Every stitch tells a story.
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- COLLECTIONS -->
+
+            <div>
+
+                <h3>Our Collections</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="cardigans.html">Cardigans</a>
+                    </li>
+
+                    <li>
+                        <a href="kids-wear.html">Kids Wear</a>
+                    </li>
+
+                    <li>
+                        <a href="muffler.html">Mufflers & Gloves</a>
+                    </li>
+
+                    <li>
+                        <a href="accessories.html">Accessories</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h3>Contact Us</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="https://wa.me/923051296795"
+                            target="_blank">
+
+                            WhatsApp: +92 305 1296795
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/binatezahoor"
+                            target="_blank">
+
+                            Instagram: binatezahoor
+
+                        </a>
+                    </li>
+
+                </ul>
+
+                <p>
+                    Feel free to contact us for orders
+                    and customized crochet creations.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Binat E Zahoor. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- IMAGE LIGHTBOX -->
+
+    <div class="image-lightbox" id="imageLightbox">
+
+        <button class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image">
+
+            &times;
+
+        </button>
+
+        <img src="" alt="Full Size Image" id="lightboxImage">
+
+    </div>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- IMAGE CLICK JAVASCRIPT -->
+
+    <script>
+
+        const allImages = document.querySelectorAll(
+            '.product-preview img, .carousel-item img'
+        );
+
+        const imageLightbox = document.getElementById('imageLightbox');
+
+        const lightboxImage = document.getElementById('lightboxImage');
+
+        const lightboxClose = document.getElementById('lightboxClose');
+
+
+        // Open image on click
+
+        allImages.forEach(function(image) {
+
+            image.addEventListener('click', function() {
+
+                imageLightbox.classList.add('active');
+
+                lightboxImage.src = this.src;
+
+                lightboxImage.alt = this.alt;
+
+            });
+
+        });
+
+
+        // Close with cross button
+
+        lightboxClose.addEventListener('click', function() {
+
+            imageLightbox.classList.remove('active');
+
+            lightboxImage.src = '';
+
+        });
+
+
+        // Close by clicking outside image
+
+        imageLightbox.addEventListener('click', function(event) {
+
+            if (event.target === imageLightbox) {
+
+                imageLightbox.classList.remove('active');
+
+                lightboxImage.src = '';
+
+            }
+
+        });
+
+
+        // Close with Escape key
+
+        document.addEventListener('keydown', function(event) {
+
+            if (event.key === 'Escape') {
+
+                imageLightbox.classList.remove('active');
+
+                lightboxImage.src = '';
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

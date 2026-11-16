@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kids Wear | Binat e Zahoor</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf5;
+            color: #503b30;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* TOP BAR */
+
+        .top-bar {
+            background: #503b30;
+            color: white;
+            text-align: center;
+            padding: 12px 8px;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        /* NAVBAR */
+
+        .site-navbar {
+            background: #fffaf5;
+            padding: 14px 4%;
+            box-shadow: 0 3px 15px rgba(80, 59, 48, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* LOGO */
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #b88968;
+            border-radius: 50%;
+            background: #f5e8dc;
+            color: #8b6349;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            color: #503b30;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand-name span {
+            color: #b88968;
+        }
+
+        .brand-subtitle {
+            display: block;
+            color: #8b725f;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* NAVIGATION LINKS */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 23px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #503b30;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b88968;
+        }
+
+        /* CUSTOMIZED ORDER HEADER */
+
+        .order-header {
+            background: linear-gradient(135deg, #f5e5d7, #fffaf5);
+            text-align: center;
+            padding: 35px 15px;
+            color: #503b30;
+        }
+
+        .order-header p {
+            font-family: Georgia, serif;
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        .order-header span {
+            color: #b88968;
+            font-weight: bold;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: 40px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #704c42;
+            font-family: Georgia, serif;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .heading-line {
+            width: 70px;
+            height: 3px;
+            background: #b88968;
+            margin: 18px auto 35px;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(80, 59, 48, 0.10);
+            transition: 0.3s;
+            border: 1px solid #f0e2d6;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(80, 59, 48, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+        }
+
+        .product-card h3 {
+            color: #75483f;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 21px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* WHATSAPP BUTTON */
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 12px;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1da851;
+            transform: scale(1.04);
+            color: white;
+        }
+
+        .contact-number {
+            display: block;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* BACK HOME BUTTON */
+
+        .back-home {
+            display: block;
+            width: fit-content;
+            margin: 45px auto;
+            padding: 13px 28px;
+            background-color: #503b30;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: #b88968;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* IMAGE POPUP */
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /* UNIQUE FOOTER - EXACT INDEX STYLE */
+
+        .site-footer {
+            background: linear-gradient(135deg, #302019, #503b30, #684b3b);
+            color: #fffaf5;
+            padding: 65px 7% 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: "BZ";
+            position: absolute;
+            right: 4%;
+            top: 15px;
+            font-family: Georgia, serif;
+            font-size: 180px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.035);
+            pointer-events: none;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 45px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-column h3 {
+            color: #e6c5a8;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 42px;
+            height: 2px;
+            background-color: #b88968;
+        }
+
+        /* FOOTER WELCOME MESSAGE */
+
+        .footer-welcome {
+            font-family: Georgia, serif;
+            color: #e6c5a8;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand span {
+            color: #e6c5a8;
+        }
+
+        .footer-tagline {
+            color: #d9bba5;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+        }
+
+        .footer-column p {
+            color: #eaded5;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* QUICK LINKS */
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #eaded5;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #e6c5a8;
+            transform: translateX(6px);
+        }
+
+        /* CONTACT DETAILS */
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border: 1px solid rgba(230, 197, 168, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e6c5a8;
+            font-size: 19px;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover .contact-icon {
+            background-color: #b88968;
+            color: white;
+            border-color: #b88968;
+        }
+
+        .contact-item a {
+            color: #eaded5;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.7;
+            word-break: break-word;
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #e6c5a8;
+        }
+
+        /* INSTAGRAM BUTTON */
+
+        .footer-instagram {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 11px 22px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #b88968;
+            border-radius: 3px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .footer-instagram:hover {
+            background-color: #b88968;
+            color: white;
+        }
+
+        /* WHATSAPP BUTTON */
+
+        .footer-contact-button {
+            display: inline-block;
+            background-color: #b88968;
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 3px;
+            margin-top: 15px;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .footer-contact-button:hover {
+            background-color: #fffaf5;
+            color: #503b30 !important;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER DECORATION */
+
+        .footer-decoration {
+            text-align: center;
+            padding: 22px 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: #e6c5a8;
+            letter-spacing: 3px;
+            font-family: Georgia, serif;
+            font-size: 13px;
+        }
+
+        /* COPYRIGHT */
+
+        .footer-bottom {
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: #d9bba5;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .back-to-top {
+            color: #fffaf5;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back-to-top:hover {
+            color: #e6c5a8;
+        }
+
+        /* TABLET RESPONSIVE */
+
+        @media (max-width: 1000px) {
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .navbar-container {
+                justify-content: center;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+
+            .footer-column:first-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            .top-bar {
+                font-size: 10px;
+                letter-spacing: 1px;
+                padding: 9px 5px;
+            }
+
+            .site-navbar {
+                padding: 12px 14px;
+            }
+
+            .navbar-container {
+                justify-content: center;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                font-size: 17px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .order-header {
+                padding: 25px 12px;
+            }
+
+            .order-header p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        /* SMALL MOBILE */
+
+        @media (max-width: 550px) {
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 92%;
+                margin: 30px auto;
+            }
+
+            .product-card img {
+                height: 280px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .site-footer {
+                padding: 45px 7% 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-column:first-child {
+                grid-column: auto;
+            }
+
+            .footer-brand {
+                font-size: 26px;
+            }
+
+            .footer-column h3 {
+                font-size: 19px;
+            }
+
+            .footer-bottom {
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .footer-decoration {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .site-footer::before {
+                font-size: 120px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .brand-logo {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        HANDMADE WITH LOVE • CROCHETED WITH CARE
+    </div>
+
+    <!-- NAVIGATION BAR -->
+
+    <header class="site-navbar">
+
+        <div class="navbar-container">
+
+            <!-- LOGO AND BRAND NAME -->
+
+            <a href="index.html" class="logo-area">
+
+                <div class="brand-logo">BZ</div>
+
+                <div>
+                    <div class="brand-name">
+                        Binat E <span>Zahoor</span>
+                    </div>
+
+                    <span class="brand-subtitle">
+                        HANDMADE CROCHET
+                    </span>
+                </div>
+
+            </a>
+
+            <!-- NAV LINKS -->
+
+            <nav>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="cardigans.html">Cardigans</a>
+
+                <a href="kids-wear.html">Kids Wear</a>
+
+                <a href="muffler.html">Muffler &amp; Gloves</a>
+
+                <a href="accessories.html">Accessories</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- CUSTOMIZED ORDER INFORMATION -->
+
+    <section class="order-header">
+
+        <p>
+            Order For Customized Products:
+            <span>+92 3051296795</span>
+        </p>
+
+    </section>
+
+    <!-- KIDS COLLECTION -->
+
+    <div class="container">
+
+        <h2 class="section-title">Our Kids Collection</h2>
+
+        <div class="heading-line"></div>
+
+        <div class="products">
+
+            <!-- Kids Wear 1 -->
+
+            <div class="product-card">
+
+                <img src="picture/1.jpg"
+                     alt="Kids Wear 1"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 2 -->
+
+            <div class="product-card">
+
+                <img src="picture/2.jpg"
+                     alt="Kids Wear 2"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 3 -->
+
+            <div class="product-card">
+
+                <img src="picture/3.jpg"
+                     alt="Kids Wear 3"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 4 -->
+
+            <div class="product-card">
+
+                <img src="picture/k1.jpg"
+                     alt="Kids Wear 4"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 5 -->
+
+            <div class="product-card">
+
+                <img src="picture/k2.jpg"
+                     alt="Kids Wear 5"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 6 -->
+
+            <div class="product-card">
+
+                <img src="picture/k3.jpg"
+                     alt="Kids Wear "
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 7 -->
+
+            <div class="product-card">
+
+                <img src="picture/k4.jpg"
+                     alt="Kids Wear 7"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 8 -->
+
+            <div class="product-card">
+
+                <img src="picture/k5.jpg"
+                     alt="Kids Wear 8"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 9 -->
+
+            <div class="product-card">
+
+                <img src="picture/k6.jpg"
+                     alt="Kids Wear 9"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 10 -->
+
+            <div class="product-card">
+
+                <img src="picture/k7.jpg"
+                     alt="Kids Wear 10"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 11 -->
+
+            <div class="product-card">
+
+                <img src="picture/k8.jpg"
+                     alt="Kids Wear 11"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+            <!-- Kids Wear 12 -->
+
+            <div class="product-card">
+
+                <img src="picture/k9.jpg"
+                     alt="Kids Wear 12"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+<!-- Kids Wear 13 -->
+
+            <div class="product-card">
+
+                <img src="picture/kd.jpg"
+                     alt="Kids Wear 12"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+<!-- Kids Wear 14 -->
+
+            <div class="product-card">
+
+                <img src="picture/kd2.jpg"
+                     alt="Kids Wear 12"
+                     onclick="openImage(this.src)">
+
+                <a href="https://wa.me/923051296795"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- BACK TO HOME -->
+
+        <a href="index.html" class="back-home">
+            Back to Home
+        </a>
+
+    </div>
+
+    <!-- IMAGE POPUP -->
+
+    <div class="lightbox" id="lightbox" onclick="closeImage()">
+
+        <span class="close" onclick="closeImage()">&times;</span>
+
+        <img id="lightbox-img" src="" alt="Kids Wear Image">
+
+    </div>
+
+    <!-- FOOTER - SAME AS INDEX.HTML -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <!-- BRAND AND WELCOME MESSAGE -->
+
+            <div class="footer-column">
+
+                <div class="footer-welcome">
+                    WELCOME TO OUR WORLD
+                </div>
+
+                <div class="footer-brand">
+                    Binat e <span>Zahoor</span>
+                </div>
+
+                <div class="footer-tagline">
+                    HANDMADE CROCHET
+                </div>
+
+                <p>
+                    Welcome to Binat E Zahoor! We are delighted to have
+                    you here. Discover a world of beautiful handmade
+                    crochet creations, thoughtfully crafted with love,
+                    passion and attention to every little detail.
+
+                    From cozy cardigans to adorable kids wear and
+                    elegant accessories, every piece is made to bring
+                    warmth, beauty and happiness into your life.
+
+                    Thank you for being a part of our handmade journey.
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Explore Our Website</h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="cardigans.html">Cardigans</a>
+                    </li>
+
+                    <li>
+                        <a href="kids-wear.html">Kids Wear</a>
+                    </li>
+
+                    <li>
+                        <a href="muffler.html">Muffler &amp; Gloves</a>
+                    </li>
+
+                    <li>
+                        <a href="accessories.html">Accessories</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT AND INSTAGRAM -->
+
+            <div class="footer-column">
+
+                <h3>Get In Touch</h3>
+
+                <a class="footer-instagram"
+                   href="https://www.instagram.com/binatezahoor"
+                   target="_blank">
+
+                    ◎ VISIT OUR INSTAGRAM
+
+                </a>
+
+                <br>
+
+                <a class="footer-contact-button"
+                   href="https://wa.me/923051296795"
+                   target="_blank">
+
+                    CONTACT US ON WHATSAPP
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr/>
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Binat E Zahoor. All Rights Reserved.
+            </p>
+
+            <p>
+                Every stitch tells a story. ♡
+            </p>
+
+            <a href="#top" class="back-to-top">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openImage(imageSrc) {
+
+            document.getElementById("lightbox").style.display = "flex";
+
+            document.getElementById("lightbox-img").src = imageSrc;
+
+        }
+
+        function closeImage() {
+
+            document.getElementById("lightbox").style.display = "none";
+
+            document.getElementById("lightbox-img").src = "";
+
+        }
+
+        document.getElementById("lightbox-img").addEventListener("click", function(event) {
+            event.stopPropagation();
+        });
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                closeImage();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

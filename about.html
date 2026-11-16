@@ -1,0 +1,1400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Binat E Zahoor</title>
+
+    <meta name="description" content="Discover Binat e Zahoor, a handmade crochet brand creating beautiful crochet products with love and care. Worldwide shipping available for international customers.">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf5;
+            color: #503b30;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        :root {
+            --dark: #503b30;
+            --brown: #684b3b;
+            --accent: #b88968;
+            --light: #fffaf5;
+            --cream: #f5e8dc;
+            --text: #806b5c;
+            --white: #ffffff;
+        }
+
+        /* TOP BAR */
+
+        .top-bar {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 11px 15px;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+        }
+
+        /* NAVBAR */
+
+        .site-navbar {
+            background: rgba(255, 250, 245, 0.98);
+            padding: 14px 6%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(80, 59, 48, 0.07);
+        }
+
+        .navbar-container {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 49px;
+            height: 49px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            background: var(--cream);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            color: var(--dark);
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand-name span {
+            color: var(--accent);
+        }
+
+        .brand-subtitle {
+            display: block;
+            color: #8b725f;
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            color: var(--dark);
+            font-family: Georgia, serif;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--accent);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* ABOUT SECTION */
+
+        .about-section {
+            max-width: 1500px;
+            margin: auto;
+            padding: 55px 5% 90px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            gap: 55px;
+        }
+
+        /* ABOUT IMAGE */
+
+        .about-image {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            height: 620px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .about-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            background: #f5e8dc;
+            border: 8px solid white;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(80, 59, 48, 0.13);
+            transition: box-shadow 0.4s ease;
+        }
+
+        .about-image img:hover {
+            box-shadow: 0 22px 45px rgba(80, 59, 48, 0.18);
+        }
+
+        /* ABOUT CONTENT */
+
+        .about-content {
+            min-width: 0;
+            padding: 10px 0;
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .about-content h2 {
+            font-family: Georgia, serif;
+            color: var(--dark);
+            font-size: clamp(34px, 3.7vw, 48px);
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        .about-content h2 span {
+            display: block;
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .about-line {
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .about-content p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 2;
+            margin-bottom: 19px;
+        }
+
+        .about-quote {
+            margin-top: 30px;
+            padding: 24px 26px;
+            background: linear-gradient(135deg, #f5e8dc, #fff7f0);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 12px 12px 0;
+            color: #795a45;
+            font-family: Georgia, serif;
+            font-size: 19px;
+            font-style: italic;
+            line-height: 1.8;
+            box-shadow: 0 7px 22px rgba(80, 59, 48, 0.05);
+        }
+
+        /* WORLDWIDE SHIPPING SECTION */
+
+        .shipping-section {
+            padding: 85px 6%;
+            background: linear-gradient(135deg, #f5e8dc, #fffaf5);
+        }
+
+        .shipping-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 45px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #fffaf5;
+            border: 1px solid #ead8c8;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(80, 59, 48, 0.07);
+        }
+
+        .shipping-icon {
+            min-width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            background: #f0dfd0;
+            color: #a97855;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .shipping-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .shipping-content h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(30px, 4vw, 42px);
+            color: var(--dark);
+            margin: 12px 0 18px;
+        }
+
+        .shipping-content h2 span {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .shipping-line {
+            width: 65px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 5px;
+            margin-bottom: 22px;
+        }
+
+        .shipping-content p {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .shipping-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 23px;
+            margin-top: 12px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .shipping-btn:hover {
+            background: #168c43;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* OUR VALUES SECTION */
+
+        .values-section {
+            background: linear-gradient(135deg, #f7ede4, #fff9f4);
+            padding: 95px 6%;
+            text-align: center;
+        }
+
+        .values-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .values-heading {
+            max-width: 720px;
+            margin: 0 auto 55px;
+        }
+
+        .values-heading h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(30px, 4vw, 42px);
+            color: var(--dark);
+            margin-bottom: 18px;
+        }
+
+        .values-heading h2 span {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .values-heading p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 27px;
+        }
+
+        .value-card {
+            background: rgba(255, 250, 245, 0.95);
+            padding: 45px 28px;
+            border: 1px solid #eddfd3;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(80, 59, 48, 0.05);
+            transition: transform 0.35s, box-shadow 0.35s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-9px);
+            box-shadow: 0 17px 35px rgba(80, 59, 48, 0.12);
+        }
+
+        .value-icon {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: #f0dfd0;
+            color: #a97855;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            transition: 0.3s;
+        }
+
+        .value-card:hover .value-icon {
+            background: var(--accent);
+            color: white;
+        }
+
+        .value-card h3 {
+            color: var(--dark);
+            font-family: Georgia, serif;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .value-card p {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact-section {
+            padding: 95px 20px;
+            text-align: center;
+            background: var(--light);
+        }
+
+        .contact-container {
+            max-width: 850px;
+            margin: auto;
+            padding: 60px 35px;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(184, 137, 104, 0.12), transparent 35%),
+                linear-gradient(135deg, #f5e8dc, #fff6ef);
+            border: 1px solid #ead8c8;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(80, 59, 48, 0.08);
+        }
+
+        .contact-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e8d2bf;
+            color: var(--dark);
+            font-size: 29px;
+        }
+
+        .contact-section h2 {
+            font-family: Georgia, serif;
+            color: var(--dark);
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 18px;
+        }
+
+        .contact-section p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 7px 18px rgba(37, 211, 102, 0.2);
+        }
+
+        .contact-btn:hover {
+            background: #168c43;
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            background: linear-gradient(135deg, #302019, #503b30, #684b3b);
+            color: var(--light);
+            padding: 70px 7% 0;
+        }
+
+        .footer-container {
+            max-width: 1350px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.4fr 0.9fr 1fr;
+            gap: 55px;
+            padding-bottom: 55px;
+        }
+
+        .footer-column h3 {
+            color: #e6c5a8;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        .footer-welcome {
+            color: #e6c5a8;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 13px;
+        }
+
+        .footer-brand {
+            font-family: Georgia, serif;
+            font-size: 29px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand span {
+            color: #e6c5a8;
+        }
+
+        .footer-tagline {
+            color: #d9bba5;
+            font-size: 10px;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+        }
+
+        .footer-column p {
+            color: #eaded5;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: #eaded5;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #e6c5a8;
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #eaded5;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #e6c5a8;
+            transform: translateX(4px);
+        }
+
+        .footer-social i {
+            color: #e6c5a8;
+            font-size: 18px;
+            width: 22px;
+        }
+
+        .footer-instagram,
+        .footer-contact-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 12px 18px;
+            margin-top: 18px;
+            color: white;
+            border: 1px solid #b88968;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        .footer-instagram:hover,
+        .footer-contact-button:hover {
+            background: #b88968;
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1350px;
+            margin: auto;
+            padding: 23px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-bottom p {
+            color: #d9bba5;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .back-to-top {
+            color: var(--light);
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back-to-top:hover {
+            color: #e6c5a8;
+        }
+
+        /* TABLET RESPONSIVE */
+
+        @media (max-width: 1100px) {
+
+            .navbar-container {
+                gap: 15px;
+            }
+
+            .nav-menu {
+                gap: 15px;
+            }
+
+            .nav-menu a {
+                font-size: 13px;
+            }
+
+            .about-section {
+                gap: 35px;
+            }
+
+            .about-image {
+                height: 570px;
+            }
+
+            .footer-container {
+                gap: 35px;
+            }
+        }
+
+        /* MOBILE NAVBAR */
+
+        @media (max-width: 850px) {
+
+            .site-navbar {
+                padding: 12px 5%;
+            }
+
+            .navbar-container {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 0 5px;
+                border-top: 1px solid #eadbd0;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 13px 10px;
+                border-bottom: 1px solid #f0e3d9;
+                font-size: 14px;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                padding: 45px 6% 65px;
+            }
+
+            .about-image {
+                max-width: 650px;
+                height: 600px;
+                margin: auto;
+            }
+
+            .about-content {
+                max-width: 760px;
+                margin: auto;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .footer-column:first-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        /* SMALL MOBILE */
+
+        @media (max-width: 550px) {
+
+            .top-bar {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+                padding: 9px 5px;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            .about-section {
+                padding: 30px 20px 55px;
+                gap: 30px;
+            }
+
+            .about-image {
+                height: 450px;
+            }
+
+            .about-image img {
+                border-width: 6px;
+            }
+
+            .about-content h2 {
+                font-size: 33px;
+            }
+
+            .about-content p {
+                font-size: 14px;
+                line-height: 1.9;
+            }
+
+            .about-quote {
+                padding: 18px;
+                font-size: 16px;
+            }
+
+            .shipping-section {
+                padding: 55px 18px;
+            }
+
+            .shipping-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 22px;
+                gap: 25px;
+            }
+
+            .shipping-icon {
+                min-width: 90px;
+                height: 90px;
+                font-size: 38px;
+            }
+
+            .shipping-line {
+                margin: 0 auto 22px;
+            }
+
+            .shipping-btn {
+                font-size: 10px;
+                padding: 13px 16px;
+            }
+
+            .values-section {
+                padding: 65px 20px;
+            }
+
+            .values-heading {
+                margin-bottom: 35px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .value-card {
+                padding: 35px 22px;
+            }
+
+            .contact-section {
+                padding: 65px 18px;
+            }
+
+            .contact-container {
+                padding: 40px 20px;
+            }
+
+            .contact-section p {
+                font-size: 14px;
+            }
+
+            .contact-btn {
+                padding: 13px 20px;
+                font-size: 12px;
+            }
+
+            .site-footer {
+                padding: 50px 7% 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-column:first-child {
+                grid-column: auto;
+            }
+
+            .footer-brand {
+                font-size: 26px;
+            }
+
+            .footer-column h3 {
+                font-size: 19px;
+                margin-bottom: 18px;
+            }
+
+            .footer-bottom {
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+            }
+        }
+
+        /* VERY SMALL MOBILE */
+
+        @media (max-width: 380px) {
+
+            .brand-logo {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+            .about-image {
+                height: 370px;
+            }
+
+            .about-content h2 {
+                font-size: 29px;
+            }
+
+            .footer-brand {
+                font-size: 24px;
+            }
+        }
+
+        /* ACCESSIBILITY */
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        HANDMADE WITH LOVE • CROCHETED WITH CARE
+    </div>
+
+    <!-- NAVBAR -->
+
+    <header class="site-navbar">
+
+        <div class="navbar-container">
+
+            <a href="index.html" class="logo-area">
+
+                <div class="brand-logo">BZ</div>
+
+                <div>
+                    <div class="brand-name">
+                        Binat E <span>Zahoor</span>
+                    </div>
+
+                    <span class="brand-subtitle">
+                        HANDMADE CROCHET
+                    </span>
+                </div>
+
+            </a>
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navMenu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="cardigans.html">Cardigans</a>
+                <a href="kids-wear.html">Kids Wear</a>
+                <a href="muffler.html">Muffler &amp; Gloves</a>
+                <a href="accessories.html">Accessories</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about-section">
+
+        <div class="about-image">
+
+            <img src="picture/pic.jpg"
+                alt="Binat e Zahoor Handmade Crochet"
+                loading="lazy">
+
+        </div>
+
+        <div class="about-content">
+
+            <div class="section-label">
+                WELCOME TO BINAT E ZAHOOR
+            </div>
+
+            <h2>
+                Made by Hand,
+                <span>Loved by Heart</span>
+            </h2>
+
+            <div class="about-line"></div>
+
+            <p>
+                Welcome to Binat E Zahoor, a place where creativity
+                meets the beauty of handmade crochet.
+            </p>
+
+            <p>
+                We believe that every handmade creation has its own
+                charm and story. Our crochet pieces are thoughtfully
+                made with patience, care and attention to every little
+                detail.
+            </p>
+
+            <p>
+                From cozy cardigans and adorable kids wear to beautiful
+                mufflers, gloves and accessories, we love creating
+                special pieces that bring warmth, comfort and happiness.
+            </p>
+
+            <p>
+                Our aim is to share the beauty of handmade work and
+                make every creation feel unique and special. We truly
+                appreciate everyone who supports our handmade journey.
+            </p>
+
+            <div class="about-quote">
+                "Every stitch is made with love, and every creation
+                carries a little piece of our heart."
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WORLDWIDE SHIPPING SECTION -->
+
+    <section class="shipping-section">
+
+        <div class="shipping-container">
+
+            <div class="shipping-icon">
+                <i class="fa-solid fa-earth-americas"></i>
+            </div>
+
+            <div class="shipping-content">
+
+                <div class="section-label">
+                    BRINGING HANDMADE LOVE TO THE WORLD
+                </div>
+
+                <h2>
+                    Worldwide <span>Shipping</span>
+                </h2>
+
+                <div class="shipping-line"></div>
+
+                <p>
+                    Beautiful handmade crochet creations deserve to
+                    be enjoyed everywhere. At Binat E Zahoor, we welcome
+                    customers from all around the world.
+                </p>
+
+                <p>
+                    Whether you are in Pakistan or somewhere across
+                    the globe, we would love to share our handmade
+                    creations with you.
+                </p>
+
+                <p>
+                    International shipping availability, delivery
+                    times and shipping charges can be discussed
+                    with us before placing your order.
+                </p>
+
+                <a href="https://wa.me/923051296795"
+                    class="shipping-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    ASK ABOUT INTERNATIONAL SHIPPING
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OUR VALUES -->
+
+    <section class="values-section">
+
+        <div class="values-container">
+
+            <div class="values-heading">
+
+                <div class="section-label">
+                    WHAT MAKES US SPECIAL
+                </div>
+
+                <h2>
+                    The Love Behind <span>Every Stitch</span>
+                </h2>
+
+                <p>
+                    We believe that beautiful things are created with
+                    patience, creativity and love.
+                </p>
+
+            </div>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <h3>Made With Love</h3>
+
+                    <p>
+                        Every piece is thoughtfully created with love,
+                        care and attention to every stitch.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <h3>Unique Designs</h3>
+
+                    <p>
+                        We love creating beautiful handmade designs
+                        that have their own charm and personality.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </div>
+
+                    <h3>Care in Every Detail</h3>
+
+                    <p>
+                        We focus on quality, creativity and careful
+                        finishing to make every piece special.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-icon">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+
+            <div class="section-label">
+                WE WOULD LOVE TO HEAR FROM YOU
+            </div>
+
+            <h2>Have Something Special in Mind?</h2>
+
+            <p>
+                Interested in our handmade crochet collection or have
+                a special design in mind? Feel free to contact us.
+                We would be happy to connect with you.
+            </p>
+
+            <a href="https://wa.me/923051296795"
+                class="contact-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-brands fa-whatsapp"></i>
+                CONTACT US ON WHATSAPP
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <div class="footer-welcome">
+                    WELCOME TO OUR WORLD
+                </div>
+
+                <div class="footer-brand">
+                    Binat E <span>Zahoor</span>
+                </div>
+
+                <div class="footer-tagline">
+                    HANDMADE CROCHET
+                </div>
+
+                <p>
+                    Welcome to Binat E Zahoor! We are delighted to have
+                    you here. Discover a world of beautiful handmade
+                    crochet creations, thoughtfully crafted with love,
+                    passion and attention to every little detail.
+
+                    From cozy cardigans to adorable kids wear and
+                    elegant accessories, every piece is made to bring
+                    warmth, beauty and happiness into your life.
+
+                    Thank you for being a part of our handmade journey.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Explore Our Website</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cardigans.html">Cardigans</a></li>
+                    <li><a href="kids-wear.html">Kids Wear</a></li>
+                    <li><a href="muffler.html">Muffler &amp; Gloves</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Get In Touch</h3>
+
+                <div class="footer-social">
+
+                    <a href="https://wa.me/923051296795"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+                        +92 305 1296795
+
+                    </a>
+
+                    <a href="https://www.instagram.com/binatezahoor"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="fa-brands fa-instagram"></i>
+                        @binatezahoor
+
+                    </a>
+
+                </div>
+
+                <a class="footer-instagram"
+                    href="https://www.instagram.com/binatezahoor"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fa-brands fa-instagram"></i>
+                    VISIT OUR INSTAGRAM
+
+                </a>
+
+                <br>
+
+                <a class="footer-contact-button"
+                    href="https://wa.me/923051296795"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    CONTACT US ON WHATSAPP
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Binat E Zahoor. All Rights Reserved.
+            </p>
+
+            <p>
+                Every stitch tells a story. ♡
+            </p>
+
+            <a href="#top" class="back-to-top">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- MOBILE NAVBAR JAVASCRIPT -->
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+        const menuIcon = menuToggle.querySelector("i");
+
+        menuToggle.addEventListener("click", function() {
+
+            navMenu.classList.toggle("show");
+
+            const isOpen = navMenu.classList.contains("show");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            if (isOpen) {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-xmark");
+            } else {
+                menuIcon.classList.remove("fa-xmark");
+                menuIcon.classList.add("fa-bars");
+            }
+
+        });
+
+        const navLinks = navMenu.querySelectorAll("a");
+
+        navLinks.forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navMenu.classList.remove("show");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+                menuIcon.classList.remove("fa-xmark");
+                menuIcon.classList.add("fa-bars");
+
+            });
+
+        });
+
+        window.addEventListener("resize", function() {
+
+            if (window.innerWidth > 850) {
+
+                navMenu.classList.remove("show");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+                menuIcon.classList.remove("fa-xmark");
+                menuIcon.classList.add("fa-bars");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

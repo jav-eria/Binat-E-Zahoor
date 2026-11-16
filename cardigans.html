@@ -1,0 +1,1008 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Cardigans | Binat E Zahoor</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fffaf7;
+            color: #503b30;
+        }
+
+        /* TOP BAR */
+
+        .top-bar {
+            background: #503b30;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background: #fffaf5;
+            padding: 14px 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            box-shadow: 0 3px 15px rgba(80,59,48,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #b88968;
+            border-radius: 50%;
+            background: #f5e8dc;
+            color: #8b6349;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            color: #503b30;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand-name span {
+            color: #b88968;
+        }
+
+        .brand-subtitle {
+            display: block;
+            color: #8b725f;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 23px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #503b30;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b88968;
+        }
+
+        /* HERO HEADER */
+
+        .page-header {
+            background:
+            linear-gradient(
+                rgba(45,29,22,0.65),
+                rgba(45,29,22,0.65)
+            ),
+            url("picture/accessories-banner.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .page-header small {
+            letter-spacing: 4px;
+            font-size: 12px;
+            color: #e6c5a9;
+        }
+
+        .page-header h1 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            margin: 18px 0;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* PRODUCT GRID */
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(80,59,48,0.10);
+            transition: 0.3s;
+            border: 1px solid #f0e2d6;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(80,59,48,0.16);
+        }
+
+        .card img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            display: block;
+            cursor: zoom-in;
+            transition: 0.4s;
+        }
+
+        .card img:hover {
+            opacity: 0.92;
+            transform: scale(1.02);
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* WHATSAPP BUTTON */
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1da851;
+            transform: translateY(-3px);
+        }
+
+        /* IMAGE VIEW */
+
+        .image-view {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.94);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 15px 20px;
+        }
+
+        .image-view img {
+            max-width: 95%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 42px;
+            cursor: pointer;
+        }
+
+        /* BACK HOME BUTTON */
+
+        .back-home {
+            text-align: center;
+            padding: 15px 15px 65px;
+        }
+
+        .home-btn {
+            display: inline-block;
+            background: #704c42;
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #b88968;
+            transform: translateY(-4px);
+        }
+
+        /* PROFESSIONAL FOOTER - SAME AS ACCESSORIES */
+
+        .site-footer {
+            background: linear-gradient(
+                135deg,
+                #302019,
+                #503b30,
+                #684b3b
+            );
+
+            color: white;
+            padding: 65px 7% 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: "BZ";
+            position: absolute;
+            right: 5%;
+            top: 15px;
+            font-family: Georgia, serif;
+            font-size: 180px;
+            color: rgba(255,255,255,0.035);
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        .footer-container {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 45px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-column h3 {
+            color: #e6c5a9;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 45px;
+            height: 2px;
+            background: #b88968;
+        }
+
+        .footer-welcome {
+            color: #d6ad8e;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fffaf5;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand span {
+            color: #d6ad8e;
+        }
+
+        .footer-tagline {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #d6ad8e;
+            margin-bottom: 22px;
+        }
+
+        .footer-column p {
+            color: #eadbd0;
+            font-size: 14px;
+            line-height: 1.9;
+            max-width: 350px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #eadbd0;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #d6ad8e;
+            padding-left: 7px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 17px;
+        }
+
+        .contact-icon {
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            border: 1px solid rgba(214,173,142,0.6);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6c5a9;
+            font-size: 17px;
+        }
+
+        .contact-item a {
+            color: #eadbd0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #d6ad8e;
+        }
+
+        .footer-instagram {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 11px 20px;
+            border: 1px solid #d6ad8e;
+            border-radius: 25px;
+            color: #e6c5a9;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .footer-instagram:hover {
+            background: #d6ad8e;
+            color: #302019;
+        }
+
+        .footer-contact-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #b88968;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .footer-contact-button:hover {
+            background: #e6c5a9;
+            color: #302019;
+            transform: translateY(-3px);
+        }
+
+        .footer-decoration {
+            text-align: center;
+            padding: 20px 10px;
+            color: rgba(255,255,255,0.45);
+            font-size: 10px;
+            letter-spacing: 4px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom {
+            max-width: 1250px;
+            margin: auto;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #eadbd0;
+            font-size: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .back-to-top {
+            color: #e6c5a9;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-to-top:hover {
+            color: white;
+        }
+
+        /* TABLET RESPONSIVE */
+
+        @media (max-width: 1000px) {
+
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 991px) {
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+
+            .footer-container .footer-column:first-child {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            header {
+                justify-content: center;
+                text-align: center;
+                padding: 12px 14px;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                font-size: 17px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .page-header {
+                padding: 70px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            .card img {
+                height: 280px;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 40px 15px;
+            }
+
+            .card img {
+                height: 350px;
+            }
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+                letter-spacing: 0;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            /* MOBILE FOOTER */
+
+            .site-footer {
+                padding: 45px 7% 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                text-align: center;
+            }
+
+            .footer-container .footer-column:first-child {
+                grid-column: auto;
+            }
+
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-brand {
+                font-size: 28px;
+            }
+
+            .footer-tagline {
+                font-size: 9px;
+            }
+
+            .footer-column p {
+                margin: auto;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .footer-decoration {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+
+            .site-footer::before {
+                font-size: 120px;
+            }
+
+        }
+
+        @media (max-width: 400px) {
+
+            .brand-logo {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        HANDMADE WITH LOVE • CROCHETED WITH CARE
+    </div>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+
+        <a href="index.html" class="logo-area">
+
+            <div class="brand-logo">BZ</div>
+
+            <div>
+                <div class="brand-name">
+                    Binat E <span>Zahoor</span>
+                </div>
+
+                <span class="brand-subtitle">
+                    HANDMADE CROCHET
+                </span>
+            </div>
+
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="cardigans.html">Cardigans</a>
+
+            <a href="kids-wear.html">Kids Wear</a>
+
+            <a href="muffler.html">Muffler &amp; Gloves</a>
+
+            <a href="accessories.html">Accessories</a>
+
+        </nav>
+
+    </header>
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+        <small>THE ART OF HANDMADE</small>
+
+        <h1>Our Cardigans Collection</h1>
+
+        <p>
+            Order Us For Customization : +923051296795
+        </p>
+
+    </section>
+
+    <!-- CARDIGAN COLLECTION -->
+
+    <section class="container">
+
+        <div class="card-container">
+
+            <div class="card">
+                <img src="picture/sw.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/6.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/s1.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/car1.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca9.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca8.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca7.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca6.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca5.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca4.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca3.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca2.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca11.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="picture/ca10.jpg" alt="Cardigan" onclick="showImage(this)">
+                <div class="card-content">
+                    <a href="#" class="whatsapp-btn" onclick="orderProduct(event, this)">WhatsApp Order</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- IMAGE VIEW -->
+
+    <div class="image-view" id="imageView" onclick="hideImage()">
+
+        <span class="close" onclick="hideImage()">&times;</span>
+
+        <img id="largeImage" src="" alt="Full Size Cardigan">
+
+    </div>
+
+    <!-- BACK TO HOME -->
+
+    <div class="back-home">
+
+        <a href="index.html" class="home-btn">
+            ← BACK TO HOME
+        </a>
+
+    </div>
+
+    <!-- PROFESSIONAL FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-column">
+
+                <div class="footer-welcome">
+                    WELCOME TO OUR WORLD
+                </div>
+
+                <div class="footer-brand">
+                    Binat E <span>Zahoor</span>
+                </div>
+
+                <div class="footer-tagline">
+                    HANDMADE CROCHET
+                </div>
+
+                <p>
+                    Welcome to Binat E Zahoor! We are delighted to share
+                    our beautiful handmade crochet creations with you.
+                    Each piece is carefully crafted with love, creativity
+                    and attention to detail, bringing elegance and warmth
+                    to your everyday life.
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Explore Our Website</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="index.html#about">About Us</a></li>
+
+                    <li><a href="cardigans.html">Cardigans</a></li>
+
+                    <li><a href="kids-wear.html">Kids Wear</a></li>
+
+                    <li><a href="muffler.html">Muffler &amp; Gloves</a></li>
+
+                    <li><a href="accessories.html">Accessories</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>Get In Touch</h3>
+
+                <a class="footer-instagram"
+                   href="https://www.instagram.com/binatezahoor"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    ◎ VISIT OUR INSTAGRAM
+                </a>
+
+                <br>
+
+                <a class="footer-contact-button"
+                   href="https://wa.me/923051296795"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    CONTACT US ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Binat E Zahoor. All Rights Reserved.
+            </p>
+
+            <p>
+                Every stitch tells a story. ♡
+            </p>
+
+            <a href="#top" class="back-to-top">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function showImage(picture) {
+
+            var viewer = document.getElementById("imageView");
+            var largePicture = document.getElementById("largeImage");
+
+            largePicture.src = picture.src;
+
+            viewer.style.display = "flex";
+        }
+
+        function hideImage() {
+
+            document.getElementById("imageView").style.display = "none";
+
+            document.getElementById("largeImage").src = "";
+        }
+
+        function orderProduct(event, button) {
+
+            event.preventDefault();
+
+            var phoneNumber = "923051296795";
+
+            var whatsappLink = "https://wa.me/" + phoneNumber;
+
+            window.open(whatsappLink, "_blank");
+        }
+
+        document.getElementById("largeImage").addEventListener("click", function(event) {
+            event.stopPropagation();
+        });
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                hideImage();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

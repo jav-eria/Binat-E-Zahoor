@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crochet Accessories | Binat E Zahoor</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf5;
+            color: #503b30;
+        }
+
+        /* TOP BAR */
+
+        .top-bar {
+            background: #503b30;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background: #fffaf5;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #b88968;
+            border-radius: 50%;
+            background: #f5e8dc;
+            color: #8b6349;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: georgia, serif;
+            font-size: 25px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            color: #503b30;
+            font-family: Arial, sans-serif;
+            font-size: 21px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand-name span {
+            color: #b88968;
+        }
+
+        .brand-subtitle {
+            display: block;
+            color: #8b725f;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* PROFESSIONAL NAVBAR FONT */
+
+        nav a {
+            text-decoration: none;
+            color: #503b30;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b88968;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 300px;
+
+            background: linear-gradient(
+                135deg,
+                #ead8c8,
+                #f5e8dc,
+                #e8d2c2
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            color: #503b30;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero small {
+            letter-spacing: 4px;
+            font-size: 12px;
+            color: #8b6349;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin: 20px 0;
+            letter-spacing: 1px;
+            color: #503b30;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 30px;
+            background: #704c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #b88968;
+            transform: translateY(-4px);
+            color: white;
+        }
+
+        /* GALLERY */
+
+        .gallery-section {
+            background: linear-gradient(
+                180deg,
+                #fffaf5,
+                #f8eee5,
+                #fffaf5
+            );
+
+            padding-top: 40px;
+            padding-bottom: 65px;
+        }
+
+        .gallery {
+            width: 89%;
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 27px;
+        }
+
+        .product-card {
+            background: #fffdfb;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 7px 25px rgba(80,59,48,0.09);
+            transition: 0.4s;
+            border: 1px solid #f0e2d6;
+        }
+
+        .product-card:hover {
+            transform: translateY(-9px);
+            box-shadow: 0 15px 30px rgba(80,59,48,0.16);
+        }
+
+        .image-box {
+            overflow: hidden;
+            background: #f5e8dc;
+            position: relative;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .product-info {
+            text-align: center;
+            padding: 19px 10px;
+        }
+
+        .product-info h3 {
+            font-family: Georgia, serif;
+            font-size: 17px;
+            color: #704c42;
+        }
+
+        /* LIGHTBOX */
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            inset: 0;
+            background: rgba(20,15,12,0.96);
+            justify-content: center;
+            align-items: center;
+            padding: 45px 20px;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border: 5px solid white;
+            border-radius: 8px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            color: white;
+            font-size: 45px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* BACK TO HOME */
+
+        .back-home {
+            text-align: center;
+            padding: 55px 15px;
+            background: #fffaf5;
+        }
+
+        .back-home a {
+            display: inline-block;
+            padding: 14px 35px;
+            background: #704c42;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .back-home a:hover {
+            background: #b88968;
+            transform: translateY(-4px);
+        }
+
+        /* PROFESSIONAL FOOTER */
+
+        .site-footer {
+            background: linear-gradient(
+                135deg,
+                #302019,
+                #503b30,
+                #684b3b
+            );
+
+            color: white;
+            padding: 65px 7% 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-footer::before {
+            content: "BZ";
+            position: absolute;
+            right: 5%;
+            top: 15px;
+            font-family: Georgia, serif;
+            font-size: 180px;
+            color: rgba(255,255,255,0.035);
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        .footer-container {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 45px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-column h3 {
+            color: #e6c5a9;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 45px;
+            height: 2px;
+            background: #b88968;
+        }
+
+        .footer-welcome {
+            color: #d6ad8e;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fffaf5;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand span {
+            color: #d6ad8e;
+        }
+
+        .footer-tagline {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #d6ad8e;
+            margin-bottom: 22px;
+        }
+
+        .footer-column p {
+            color: #eadbd0;
+            font-size: 14px;
+            line-height: 1.9;
+            max-width: 350px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #eadbd0;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #d6ad8e;
+            padding-left: 7px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 17px;
+        }
+
+        .contact-icon {
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            border: 1px solid rgba(214,173,142,0.6);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e6c5a9;
+            font-size: 17px;
+        }
+
+        .contact-item a {
+            color: #eadbd0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #d6ad8e;
+        }
+
+        .footer-instagram {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 11px 20px;
+            border: 1px solid #d6ad8e;
+            border-radius: 25px;
+            color: #e6c5a9;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .footer-instagram:hover {
+            background: #d6ad8e;
+            color: #302019;
+        }
+
+        .footer-contact-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #b88968;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .footer-contact-button:hover {
+            background: #e6c5a9;
+            color: #302019;
+            transform: translateY(-3px);
+        }
+
+        .footer-decoration {
+            text-align: center;
+            padding: 20px 10px;
+            color: rgba(255,255,255,0.45);
+            font-size: 10px;
+            letter-spacing: 4px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom {
+            max-width: 1250px;
+            margin: auto;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #eadbd0;
+            font-size: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .back-to-top {
+            color: #e6c5a9;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-to-top:hover {
+            color: white;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 1100px) {
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media(max-width: 991px) {
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+
+            .footer-container .footer-column:first-child {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+        @media(max-width: 750px) {
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .hero {
+                min-height: 250px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                width: 92%;
+                gap: 17px;
+            }
+
+            .product-card img {
+                height: 220px;
+            }
+
+        }
+
+        @media(max-width: 576px) {
+
+            .site-footer {
+                padding: 45px 7% 0;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                text-align: center;
+            }
+
+            .footer-container .footer-column:first-child {
+                grid-column: auto;
+            }
+
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-brand {
+                font-size: 28px;
+            }
+
+            .footer-tagline {
+                font-size: 9px;
+            }
+
+            .footer-column p {
+                margin: auto;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .footer-decoration {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+
+            .site-footer::before {
+                font-size: 120px;
+            }
+
+        }
+
+        @media(max-width: 450px) {
+
+            .top-bar {
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            nav {
+                gap: 13px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 220px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                width: 85%;
+            }
+
+            .product-card img {
+                height: 290px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        HANDMADE WITH LOVE • CROCHETED WITH CARE
+    </div>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <a href="index.html" class="navbar-brand">
+
+            <div class="brand-logo">BZ</div>
+
+            <div>
+                <div class="brand-name">
+                    Binat E <span>Zahoor</span>
+                </div>
+
+                <span class="brand-subtitle">
+                    HANDMADE CROCHET
+                </span>
+            </div>
+
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+
+            <a href="cardigans.html">Cardigans</a>
+
+            <a href="kids-wear.html">Kids Wear</a>
+
+            <a href="muffler.html">Muffler & Gloves</a>
+
+            <a href="accessories.html" class="active">Accessories</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <small>THE ART OF HANDMADE</small>
+
+            <h1>Our Crochet Accessories</h1>
+
+            <p>Order Us For Customization(+923051296795)</p>
+
+            <a href="#accessories" class="hero-btn">
+                EXPLORE COLLECTION
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="gallery-section" id="accessories">
+
+        <div class="gallery">
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/5.jpg" alt="Crochet Accessory 1" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Elegant Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/7.jpg" alt="Crochet Accessory 2" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Beautiful Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/8.jpg" alt="Crochet Accessory 3" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Classic Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/bn .jpg" alt="Crochet Accessory 4" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Stylish Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ba2.jpg" alt="Crochet Accessory 5" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Lovely Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ba3.jpg" alt="Crochet Accessory 6" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Unique Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ba4.jpg" alt="Crochet Accessory 7" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Premium Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ba1.jpg" alt="Crochet Accessory 8" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Charming Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac1.jpg" alt="Crochet Accessory 9" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Creative Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac2.jpg" alt="Crochet Accessory 10" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Trendy Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac3.jpg" alt="Crochet Accessory 11" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Beautiful Handmade Piece</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac5.jpg" alt="Crochet Accessory 12" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Elegant Handmade Piece</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac6.jpg" alt="Crochet Accessory 13" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Modern Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac7.jpg" alt="Crochet Accessory 14" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Exclusive Crochet Piece</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac8.jpg" alt="Crochet Accessory 15" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Stylish Handmade Piece</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac9.jpg" alt="Crochet Accessory 16" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Premium Handmade Piece</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac11.jpg" alt="Crochet Accessory 18" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Unique Handmade Piece</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac12.jpg" alt="Crochet Accessory 19" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Creative Handmade Piece</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac13.jpg" alt="Crochet Accessory 20" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Special Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac14.jpg" alt="Crochet Accessory 21" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Special Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac15.jpg" alt="Crochet Accessory 22" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Special Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac16.jpg" alt="Crochet Accessory 23" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Special Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac17.jpg" alt="Crochet Accessory 24" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Special Crochet Design</h3></div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box">
+                    <img src="picture/ac18.jpg" alt="Crochet Accessory 25" onclick="openImage(this)">
+                </div>
+                <div class="product-info"><h3>Special Crochet Design</h3></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LIGHTBOX -->
+
+    <div class="lightbox" id="lightbox" onclick="closeImage()">
+
+        <span class="close-btn">&times;</span>
+
+        <img id="fullImage" src="" alt="Full Size Crochet Accessory">
+
+    </div>
+
+    <!-- BACK TO HOME -->
+
+    <section class="back-home">
+
+        <a href="index.html">← BACK TO HOME</a>
+
+    </section>
+
+    <!-- PROFESSIONAL FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-column">
+
+                <div class="footer-welcome">
+                    WELCOME TO OUR WORLD
+                </div>
+
+                <div class="footer-brand">
+                    Binat E <span>Zahoor</span>
+                </div>
+
+                <div class="footer-tagline">
+                    HANDMADE CROCHET
+                </div>
+
+                <p>
+                    Welcome to Binat E Zahoor! We are delighted to share
+                    our beautiful handmade crochet creations with you.
+                    Each piece is carefully crafted with love, creativity
+                    and attention to detail, bringing elegance and warmth
+                    to your everyday life.
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Explore Our Website</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="cardigans.html">Cardigans</a></li>
+
+                    <li><a href="kids-wear.html">Kids Wear</a></li>
+
+                    <li><a href="muffler.html">Muffler & Gloves</a></li>
+
+                    <li><a href="accessories.html">Accessories</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>Get In Touch</h3>
+
+               
+ <a class="footer-instagram"
+                   href="https://www.instagram.com/binatezahoor"
+                   target="_blank">
+
+                    ◎ VISIT OUR INSTAGRAM
+
+                </a>
+
+                <br>
+
+                <a class="footer-contact-button"
+                   href="https://wa.me/923051296795"
+                   target="_blank">
+
+                    CONTACT US ON WHATSAPP
+
+                </a>
+
+            </div>
+</div>
+        
+
+        <hr/>
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Binat E Zahoor. All Rights Reserved.
+            </p>
+
+            <p>
+                Every stitch tells a story. ♡
+            </p>
+
+            <a href="#top" class="back-to-top">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openImage(image) {
+
+            document.getElementById("lightbox").style.display = "flex";
+
+            document.getElementById("fullImage").src = image.src;
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+        function closeImage() {
+
+            document.getElementById("lightbox").style.display = "none";
+
+            document.getElementById("fullImage").src = "";
+
+            document.body.style.overflow = "auto";
+
+        }
+
+        document.getElementById("fullImage").addEventListener("click", function(event) {
+
+            event.stopPropagation();
+
+        });
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                closeImage();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
